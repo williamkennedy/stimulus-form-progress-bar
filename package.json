@@ -6,7 +6,11 @@
   "main": "dist/stimulus-form-progress-bar.js",
   "umd:main": "dist/stimulus-form-progress-bar.umd.js", 
   "module": "dist/stimulus-form-progress-bar.m.js",    
-  "module": "dist/stimulus-form-progress-bar.modern.js",    
+  "esmodule": "dist/stimulus-form-progress-bar.modern.js",    
+  "repository": {
+    "url": "https://github.com/williamkennedy/stimulus-form-progress-bar",
+    "type": "git"
+  },
   "author": "William Kennedy",
   "license": "MIT",
   "private": false,
