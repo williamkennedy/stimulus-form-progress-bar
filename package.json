@@ -1,12 +1,12 @@
 {
   "name": "stimulus-form-progress-bar",
   "amdName": "StimulusFormProgressBar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Stimulusjs controller to help with displaying progress when a user is filling out forms",
   "main": "dist/stimulus-form-progress-bar.js",
-  "umd:main": "dist/stimulus-form-progress-bar.umd.js", 
-  "module": "dist/stimulus-form-progress-bar.m.js",    
-  "esmodule": "dist/stimulus-form-progress-bar.modern.js",    
+  "umd:main": "dist/stimulus-form-progress-bar.umd.js",
+  "module": "dist/stimulus-form-progress-bar.m.js",
+  "esmodule": "dist/stimulus-form-progress-bar.modern.js",
   "repository": {
     "url": "https://github.com/williamkennedy/stimulus-form-progress-bar",
     "type": "git"
