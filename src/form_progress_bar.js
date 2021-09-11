@@ -18,7 +18,7 @@ export default class extends Controller {
   updateProgressBar() {
     let canIncrement = false
     if (event.target.type === "radio") {
-      const radioGroup = document.querySelectorAll(`[name="${event.target.name}"]`)
+      const radioGroup = this.element.querySelectorAll(`[name="${event.target.name}"]`)
       canIncrement = !Array.from(radioGroup).some((input) =>  (Boolean(event.target.dataset.filled) && JSON.parse(event.target.dataset.filled)))
       radioGroup.forEach(e => e.dataset.filled = true)
       event.target.dataset.filled = false
@@ -60,7 +60,7 @@ export default class extends Controller {
 
   _setDefaultIncrement() {
     // find total number of questions and divide by inputCount
-    const inputs = document.querySelectorAll("[data-action*='progress-bar#updateProgressBar']")
+    const inputs = this.element.querySelectorAll("[data-action*='progress-bar#updateProgressBar']")
     inputCount = new Set(Array.from(inputs).map(e => e.name)).size
     const magicNumber = ((100 - this.minWidthValue) / inputCount)
     return magicNumber
