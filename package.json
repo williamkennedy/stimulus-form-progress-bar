@@ -1,7 +1,7 @@
 {
   "name": "stimulus-form-progress-bar",
   "amdName": "StimulusFormProgressBar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Stimulusjs controller to help with displaying progress when a user is filling out forms",
   "main": "dist/stimulus-form-progress-bar.js",
   "umd:main": "dist/stimulus-form-progress-bar.umd.js",
