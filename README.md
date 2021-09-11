@@ -1,5 +1,7 @@
 # Stimulus Form Progress Bar
 
+A Stimulusjs controller to help with displaying progress when a user is filling out forms.
+
 Checkout the [demo](https://williamkennedy.github.io/stimulus-form-progress-bar/)
 
 ## Install 
@@ -50,24 +52,26 @@ Note you need a bar target and each input element except radio buttons need a re
 
 ```
 <div data-controller='progress-bar'  class="container mx-auto">
-            <div class="relative pt-1 px-2">
-              <div class="flex mb-2 items-center justify-between">
-                <div>
-                  <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-purple-600 bg-purple-200">
-                    Start
-                  </span>
-                </div>
-                <div class="text-right">
-                  <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-purple-600 bg-purple-200">
-                    Finish
-                  </span>
-                </div>
-              </div>
-              <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-purple-200">
-                <div data-progress-bar-target='bar' required class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500">
-                </div>
-              </div>
-            </div>
+  <div class="relative pt-1 px-2">
+    <div class="flex mb-2 items-center justify-between">
+      <div>
+        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-purple-600 bg-purple-200">
+          Start
+        </span>
+      </div>
+      <div class="text-right">
+        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-purple-600 bg-purple-200">
+          Finish
+         </span>
+       </div>
+      </div>
+      <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-purple-200">
+        <div data-progress-bar-target='bar' required class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ```
 3. Next, add a required attribute to the input element followed by `data-action='progress-bar#updateProgressBar'`
