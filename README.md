@@ -74,10 +74,10 @@ Note you need a bar target and each input element except radio buttons need a re
 </div>
 
 ```
-3. Next, add a required attribute to the input element followed by `data-action='progress-bar#updateProgressBar'`
+3. Next, add a `required` attribute to the input element followed by `data-action='progress-bar#updateProgressBar'`
 
 ```
-<input data-action='progress-bar#updateProgressBar' type="text" name="name" id="name" placeholder="John Doe" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+<input data-action='progress-bar#updateProgressBar' type="text" name="name" id="name" placeholder="John Doe" required class="form-input" />
 
 ```
 
