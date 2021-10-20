@@ -5,102 +5,117 @@
     <title>Stimulus Form Progress</title>
     <link href="https://unpkg.com/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://unpkg.com/@tailwindcss/forms@0.3.2/dist/forms.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
-     <script src="https://unpkg.com/stimulus-form-progress-bar/dist/stimulus-form-progress-bar.umd.js"></script>
-     <!-- <script src="../dist/stimulus-form-progress-bar.umd.js"></script>  -->
-    <head>
-      <body>
-        <div class="flex items-center min-h-screen bg-gray-50 dark:bg-gray-900">
-          <div data-controller='progress-bar' class="container mx-auto">
-            <div class="relative pt-1 px-2">
-              <div class="flex mb-2 items-center justify-between">
-                <div>
-                  <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-purple-600 bg-purple-200">
-                    Start
-                  </span>
+    <!-- <script src="https://unpkg.com/stimulus-form-progress-bar/dist/stimulus-form-progress-bar.umd.js"></script> -->
+      <head>
+        <body>
+          <div class="flex items-center min-h-screen bg-gray-50 dark:bg-gray-900">
+            <div data-controller='progress-bar' class="container mx-auto">
+              <div class="relative pt-1 px-2">
+                <div class="flex mb-2 items-center justify-between">
+                  <div>
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-purple-600 bg-purple-200">
+                      Start
+                    </span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-purple-600 bg-purple-200">
+                      Finish
+                    </span>
+                  </div>
                 </div>
-                <div class="text-right">
-                  <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-purple-600 bg-purple-200">
-                    Finish
-                  </span>
+                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-purple-200">
+                  <div data-progress-bar-target='bar' required class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500">
+                  </div>
                 </div>
               </div>
-              <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-purple-200">
-                <div data-progress-bar-target='bar' required class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500">
-                </div>
-              </div>
-            </div>
 
-            <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
-              <div class="text-center">
-                <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">Contact Us</h1>
-                <p class="text-gray-400 dark:text-gray-400">Fill up the form below to send us a message.</p>
-              </div>
-              <div class="m-7">
-                <form  action="" method="POST" id="form">
-                  <div class="mb-6">
-                    <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Full Name</label>
-                    <input data-action='progress-bar#updateProgressBar' type="text" name="name" id="name" placeholder="John Doe" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                  </div>
-                  <div class="mb-6">
-                    <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
-                    <input data-action='progress-bar#updateProgressBar' type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                  </div>
-                  <div class="mb-6">
-
-                    <label for="phone" class="text-sm text-gray-600 dark:text-gray-400">Phone Number</label>
-                    <input data-action='progress-bar#updateProgressBar' type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                  </div>
-                  <div class="mb-6">
-                    <label for='country' class="text-sm text-gray-600 dark:text-gray-400">Country</label>
-                    <div class="relative">
-                      <select data-action='progress-bar#updateProgressBar' required  name="country" class="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                        <option></option>
-                        <option>Ireland</option> 
-                        <option>USA</option> 
-                        <option>Canada</option> 
-                      </select>
+              <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+                <div class="text-center">
+                  <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">Contact Us</h1>
+                  <p class="text-gray-400 dark:text-gray-400">Fill up the form below to send us a message.</p>
+                </div>
+                <div class="m-7">
+                  <form  action="" method="POST" id="form">
+                    <div class="mb-6">
+                      <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Full Name</label>
+                      <input data-action='progress-bar#updateProgressBar' type="text" name="name" id="name" placeholder="John Doe" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
                     </div>
-                  </div>
-                  <div class="mb-6">
-                    <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
-
-                    <textarea data-action='progress-bar#updateProgressBar' rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
-                  </div>
-                  <div class="mb-6">
-                    <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Agree to Private Policy
-                      <input data-action='progress-bar#updateProgressBar' required type="checkbox" name="checkbox" class='focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded'>
-                    </label>
-                  </div>
-                  <div class="mb-6">
-                    <label for="happy" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Happy?</label>
-                    <div  class='inline-flex'>
-                      <label>
-                        <input data-action='progress-bar#updateProgressBar' type="radio" name="happy"  id="yes"/>
-                        <span>Yes</span>
-                      </label>  
-                      <label class='ml-2'>
-                        <input data-action='progress-bar#updateProgressBar' type="radio" name="happy"  id="no"/>
-                        <span>No</span>
-                      </label>  
+                    <div class="mb-6">
+                      <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
+                      <input data-action='progress-bar#updateProgressBar' type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
                     </div>
+                    <div class="mb-6">
 
-                  </div>
-                  <div class="mb-6">
-                    <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">Send Message</button>
-                  </div>
-                </form>
+                      <label for="phone" class="text-sm text-gray-600 dark:text-gray-400">Phone Number</label>
+                      <input data-action='progress-bar#updateProgressBar' type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div class="mb-6">
+                      <label for='country' class="text-sm text-gray-600 dark:text-gray-400">Country</label>
+                      <div class="relative">
+                        <select data-action='progress-bar#updateProgressBar' required  name="country" class="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                          <option></option>
+                          <option>Ireland</option> 
+                          <option>USA</option> 
+                          <option>Canada</option> 
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-6">
+                      <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
+
+                      <textarea data-action='progress-bar#updateProgressBar' rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
+                    </div>
+                    <div class="mb-6">
+                      <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Agree to Private Policy
+                        <input data-action='progress-bar#updateProgressBar' required type="checkbox" name="checkbox" class='focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded'>
+                      </label>
+                    </div>
+                    <div class="mb-6">
+                      <label for="happy" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Happy?</label>
+                      <div  class='inline-flex'>
+                        <label>
+                          <input data-action='progress-bar#updateProgressBar' type="radio" name="happy"  id="yes"/>
+                          <span>Yes</span>
+                        </label>  
+                        <label class='ml-2'>
+                          <input data-action='progress-bar#updateProgressBar' type="radio" name="happy"  id="no"/>
+                          <span>No</span>
+                        </label>  
+                      </div>
+
+                    </div>
+                    <div class="mb-6">
+                      <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">Send Message</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+          <script>
+            window.esmsInitOptions = { enable: ['css-modules', 'json-modules'] }
+          </script>
+          <script async src="https://unpkg.com/es-module-shims/dist/es-module-shims.js"></script>
+          <!-- <script src="https://unpkg.com/stimulus-form-progress-bar/dist/stimulus-form-progress-bar.umd.js"></script> -->
+          <script type="importmap">
+            {
+        "imports": {
+          "@hotwired/stimulus": "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js",
+          "stimulus-form-progress-bar": "https://unpkg.com/stimulus-form-progress-bar/dist/stimulus-form-progress-bar.modern.js"
+        }
+      }
+      <!-- in developmen with npx serve
 
-        <script>
-          (() => {
-                      const application = Stimulus.Application.start();
-                      application.register('progress-bar', StimulusFormProgressBar.ProgressBar);
-                    })()
-        </script>
-      </body>
+          "stimulus-form-progress-bar": "../dist/stimulus-form-progress-bar.modern.js"
+          -->
+          </script>
+          <script type="module">
+            import { Application } from "@hotwired/stimulus"
+            import { ProgressBar } from "stimulus-form-progress-bar"
+
+            const application = Application.start();
+            application.register('progress-bar', ProgressBar);
+          </script>
+        </body>
 </html>
 
