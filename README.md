@@ -22,7 +22,7 @@ or use directly from unpkg:
 
 
 ```
-<script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
+<script src="https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"></script>
 <script src="https://unpkg.com/stimulus-form-progress-bar/dist/stimulus-form-progress-bar.umd.js"></script>
 ```
 
