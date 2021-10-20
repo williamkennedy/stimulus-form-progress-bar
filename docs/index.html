@@ -97,6 +97,10 @@
           </script>
           <script async src="https://unpkg.com/es-module-shims/dist/es-module-shims.js"></script>
           <!-- <script src="https://unpkg.com/stimulus-form-progress-bar/dist/stimulus-form-progress-bar.umd.js"></script> -->
+
+      <!-- in developmen with npx serve
+          "stimulus-form-progress-bar": "../dist/stimulus-form-progress-bar.modern.js"
+          -->
           <script type="importmap">
             {
         "imports": {
@@ -104,10 +108,6 @@
           "stimulus-form-progress-bar": "https://unpkg.com/stimulus-form-progress-bar/dist/stimulus-form-progress-bar.modern.js"
         }
       }
-      <!-- in developmen with npx serve
-
-          "stimulus-form-progress-bar": "../dist/stimulus-form-progress-bar.modern.js"
-          -->
           </script>
           <script type="module">
             import { Application } from "@hotwired/stimulus"
