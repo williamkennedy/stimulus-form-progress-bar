@@ -24,7 +24,7 @@
     "stimulus": "^2.0.0"
   },
   "scripts": {
-    "build": "microbundle --globals stimulus=Stimulus",
+    "build": "microbundle --globals @hotwired/stimulus=Stimulus" ,
     "dev": "microbundle watch"
   }
 }

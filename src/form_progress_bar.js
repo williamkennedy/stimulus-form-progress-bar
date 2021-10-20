@@ -1,4 +1,4 @@
-import { Controller } from 'stimulus'
+import { Controller } from '@hotwired/stimulus'
 
 export default class extends Controller {
   static targets = ['bar']
@@ -60,8 +60,7 @@ export default class extends Controller {
 
   _setDefaultIncrement() {
     // find total number of questions and divide by inputCount
-    const inputs = this.element.querySelectorAll("[data-action*='progress-bar#updateProgressBar']")
-    inputCount = new Set(Array.from(inputs).map(e => e.name)).size
+    let inputCount = new Set(Array.from(this.element.querySelectorAll("[data-action*='progress-bar#updateProgressBar']")).map(e => e.name)).size
     const magicNumber = ((100 - this.minWidthValue) / inputCount)
     return magicNumber
   }
