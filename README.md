@@ -72,13 +72,12 @@ Note you need a bar target and each input element except radio buttons need a re
     </div>
   </div>
 </div>
-
 ```
+
 3. Next, add a `required` attribute to the input element followed by `data-action='progress-bar#updateProgressBar'`
 
 ```
 <input data-action='progress-bar#updateProgressBar' type="text" name="name" id="name" placeholder="John Doe" required class="form-input" />
-
 ```
 
 Checkout the example in the [docs/index.html](https://github.com/williamkennedy/stimulus-form-progress-bar/blob/main/docs/index.html) file
